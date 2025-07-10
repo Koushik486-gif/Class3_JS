@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <center>
-        <h1 style="color:green">Codingal education</h1>
-        <h3>Function Declaration</h3>
-        <script>
-            var result = function(a,b) {return a*b};
-            document.write(result(5,8));
-        </script>
-    </center>
+    <h3>Random info</h3>
+    <p id="date"></p>
+    <p id="numbers"></p>
+    <p id="rounded"></p>
+    <script>
+     document.getElementById("date").innerHTML="Date :" + new Date().toDateString();
+     let nums="";
+     for (let i=0;i<3;i++){
+        nums+= Math.floor(Math.random()*100)+ "";
+     }
+     document.getElementById("numbers").innerHTML="Random numbers :"+ nums;
+
+     let rand=Math.random()*10;
+     document.getElementById("rounded").innerHTML="Rounded number:" + rand.toFixed(2);
+    </script>
 </body>
 </html>
